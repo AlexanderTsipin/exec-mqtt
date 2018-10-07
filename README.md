@@ -14,7 +14,7 @@ npm install mqtt-exec --save
 Simple Example:
 
 ```js
-const mqtt = require("mqtt-exec");
+const mqtt = require("exec-mqtt");
 
 const clientConnectionParams = {
   services: {rp: require('request-promise')},
