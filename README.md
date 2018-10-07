@@ -5,7 +5,7 @@
 ## Installation
 
 ```sh
-npm install mqtt-exec --save
+npm install exec-mqtt --save
 ```
 
 <a name="example"></a>
