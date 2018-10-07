@@ -1,4 +1,4 @@
-const mqtt = require("../Classes/MqttReqRes");
+const mqtt = require("../main");
 
 const clientConnectionParams = {
   services: {rp: require('request-promise')},

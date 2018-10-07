@@ -1,6 +1,6 @@
 {
-  "name": "exec-mqttt",
-  "version": "0.0.2",
+  "name": "exec-mqtt",
+  "version": "0.0.3",
   "description": "",
   "main": "main.js",
   "directories": {
