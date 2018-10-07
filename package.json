@@ -1,6 +1,6 @@
 {
-  "name": "rewrite",
-  "version": "1.0.0",
+  "name": "exec-mqttt",
+  "version": "0.0.2",
   "description": "",
   "main": "main.js",
   "directories": {

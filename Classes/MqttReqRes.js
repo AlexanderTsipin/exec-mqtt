@@ -64,7 +64,7 @@ class MqttExec extends MqttBase {
   }
 
   // execute command
-  run(topic, params, meta) {
+  exec(topic, params, meta) {
     const payload = this.runExecuteStatus(topic, params, meta);
     return this.runResultStatus(payload.meta.uuid);
   }
