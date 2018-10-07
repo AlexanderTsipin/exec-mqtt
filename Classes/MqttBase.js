@@ -18,14 +18,17 @@ class MqttBase {
     this.client.publish(payload, msg);
   }
 
-  parsePayloadToPath(payload) {
-    this.a = 5;
-    const res = payload.split("/");
+   parseTopic(topic){
     return {
-      host: res[0],
-      className: res[1],
-      func: res[2]
-    };
+        methods : topic.split("/")[topic.split("/").length-1].split("."),
+        device : topic.substring(0, topic.lastIndexOf("/")+1)
+    }
+  }
+
+  callMethod(execMethod , params = {a:23}){
+    let command = this.services
+    execMethod.map(metod=>command = command[metod])
+    return command(params)
   }
 
   startLocalClient(mqttUrl, topic) {

@@ -13,7 +13,7 @@ const clientConnectionParams = {
 const mqttClient = new mqtt(clientConnectionParams);
 
 mqttClient.init().then(client => {
-    mqttClient.exec("Client1/rp/get", {uri: "https://restcountries.eu/rest/v2/all"} , {timeout:  5555})
+    mqttClient.exec("Client1/rp.get", {uri: "https://restcountries.eu/rest/v2/all"} , {timeout:  5555})
     .then(res => {
       console.log(res)
     });

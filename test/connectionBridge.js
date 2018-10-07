@@ -75,7 +75,7 @@ describe("send messages tests", function() {
     /***************************NORMAL*********************************** */
     it("send from client1 to client1", function(done) {
       mqttClient
-        .exec(client1Name + "/gpio/addNumbers", {
+        .exec(client1Name + "/gpio.addNumbers", {
           num1: 13,
           num2: 3
         } , {timeout:  5555})
@@ -87,7 +87,7 @@ describe("send messages tests", function() {
 
     it("send from server to server", function(done) {
       mqttServer
-        .exec(serverName + "/gpio/addNumbers", {
+        .exec(serverName + "/gpio.addNumbers", {
           num1: 13,
           num2: 3
         })
@@ -116,7 +116,7 @@ describe("send messages tests", function() {
     it("send from client to server", function(done) {
       this.timeout(5000);
       mqttClient
-        .exec(serverName + "/gpio/addNumbers", {
+        .exec(serverName + "/gpio.addNumbers", {
           num1: 13,
           num2: 3
         })
@@ -129,7 +129,7 @@ describe("send messages tests", function() {
     it("send from server to client", function(done) {
       this.timeout(5000);
       mqttServer
-        .exec(client1Name + "/gpio/addNumbers", {
+        .exec(client1Name + "/gpio.addNumbers", {
           num1: 13,
           num2: 3
         })

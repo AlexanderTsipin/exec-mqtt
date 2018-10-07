@@ -73,11 +73,10 @@ class MqttExec extends MqttBase {
     return {
       //* *********************EXECUTE STATUS**************************************
       execute: req => {
-        // parse topic to execution path device/class/functionName
+        // parse topic to execution path device/method.method
         // execute command
-        const { host, className, func } = this.parsePayloadToPath(req.topic);
-        return this.services[className][func]
-          .call(this.services, req.params)
+        const { device, methods } = this.parseTopic(req.topic);
+        this.callMethod(methods,req.params)
           .then(result => {
             // send result message
             req.result = result;
