@@ -1,0 +1,25 @@
+{
+  "name": "rewrite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^2.18.8"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "mosca": "^2.8.3",
+    "sinon": "^6.3.4",
+    "eslint": "^5.3.0",
+    "prettier": "^1.14.3",
+    "prettier-eslint": "^8.8.2"
+  }
+}
