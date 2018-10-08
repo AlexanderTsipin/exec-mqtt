@@ -1,7 +1,6 @@
 This is a simple mqtt publish / subscribe  request / replay pattern
 
-BUILD IN PROGRESS 
-THIS IS EVEN NOT A BETA YET
+BUILD IN PROGRESS, 
 WILL UPDATE SOON
 
 ## About
