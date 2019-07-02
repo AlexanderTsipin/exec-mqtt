@@ -8,8 +8,8 @@ let mqttClient = {};
 let mqttServer = {};
 const serverName = "server35";
 const client1Name = "client41";
-const mqtt = require("../Classes/mqttReqRes");
-const service = require("../Classes/services");
+const mqtt = require("../Classes/MqttReqRes");
+const service = require("../Classes/Services");
 
 //* ******************************create mqtt instances******************************/
 const clientBrokerPort = 3002;
@@ -102,8 +102,8 @@ describe("send messages tests", function() {
     it("create bridge", function(done) {
       mqttClient
         .addBrigde(
-          { url: "lcalhost", port: 3001, name: serverName },
-          { url: "lcalhost", port: 3002, name: client1Name }
+          { url: "mqtt://localhost", port: 3001, name: serverName },
+          { url: "mqtt://localhost", port: 3002, name: client1Name }
         )
         .then(() => {
           done();

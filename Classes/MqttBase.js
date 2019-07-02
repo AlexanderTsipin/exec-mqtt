@@ -47,21 +47,18 @@ class MqttBase {
     this.a = 5;
     // connect&subscribe return mqtt instance
     return new Promise((resolve, reject) => {
-      const mqttClient = mqtt.connect(mqttUrl);
-      let thisTopic = `${topic}/#`;
-      if (topic === "#") thisTopic = "#";
-      mqttClient.on("connect", () => {
-        mqttClient.subscribe(
-          thisTopic,
-          {
-            qos: 2
-          },
-          err => {
-            if (err) reject(err);
-            resolve(mqttClient);
-          }
-        );
-      });
+        const mqttClient = mqtt.connect(mqttUrl.url, mqttUrl);
+        let thisTopic = `${topic}/#`;
+        if (topic === "#") thisTopic = "#";
+        mqttClient.on("connect", () => {
+          mqttClient.subscribe(
+            thisTopic,
+            err => {
+              if (err) reject(err);
+              resolve(mqttClient);
+            }
+          );
+        });
     });
   }
 
